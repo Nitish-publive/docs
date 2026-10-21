@@ -3,9 +3,19 @@ title: "Overview"
 description: "APIs for managing newsletter subscriptions — subscribe, unsubscribe, and email verification"
 ---
 
+import ApiAccess from '/snippets/availability/api-access.mdx';
+
 The Newsletter CMS API lets you build subscription flows for your Publive-powered publication. Use these endpoints to subscribe readers to newsletter groups, process unsubscriptions from campaign emails, and verify subscriber email addresses.
 
 **Base URL:** `https://cms.thepublive.com/publisher/<PUBLISHER_ID>/`
+
+## Availability
+
+All plans include newsletters. Your plan sets a monthly limit on email sends and a limit on newsletter groups. You can buy more email sends and more groups as add-ons. To check your limits or to buy add-ons, contact [support@thepublive.com](mailto:support@thepublive.com).
+
+To call the Newsletter API from your own code, you also need API access:
+
+<ApiAccess />
 
 ## Endpoints
 
@@ -34,12 +44,12 @@ sequenceDiagram
 
 ## reCAPTCHA
 
-Newsletter subscribe supports optional captcha verification. When your publisher has a `newsletter_captcha.secret_key` configured:
+Newsletter subscribe supports optional captcha verification. When your workspace has a `newsletter_captcha.secret_key` configured:
 
 1. Include `check_for_captcha` (any truthy value) in the request body to trigger captcha validation.
 2. Include `g-recaptcha-response` with the token from your frontend reCAPTCHA widget.
 3. On successful verification, the backend sets `verification_required = 0` — the subscriber does not need to verify their email separately.
 
 <Warning>
-  If your publisher has no `newsletter_captcha.secret_key` configured but you send `check_for_captcha`, Google will reject the blank secret key and the request will return `400`.
+  If your workspace has no `newsletter_captcha.secret_key` configured but you send `check_for_captcha`, Google will reject the blank secret key and the request will return `400`.
 </Warning>

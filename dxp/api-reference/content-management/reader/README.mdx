@@ -3,6 +3,8 @@ title: "Overview"
 description: "APIs for reader authentication — login, registration, password reset, and email verification"
 ---
 
+import ApiAccess from '/snippets/availability/api-access.mdx';
+
 The Reader CMS API lets you build reader-facing authentication flows for your Publive-powered publication. Use these endpoints to handle reader sign-up, login, password recovery, and email verification.
 
 **Base URL:** `https://cms.thepublive.com/publisher/<PUBLISHER_ID>/`
@@ -10,6 +12,14 @@ The Reader CMS API lets you build reader-facing authentication flows for your Pu
 <Info>
   All Reader endpoints are scoped to your publisher via the `publisher_id` path parameter. The publisher is identified by the URL — no additional `Authorization` header is required for public flows such as register and forgot-password.
 </Info>
+
+## Availability
+
+All plans include the Reader Login Suite.
+
+To call the Reader API from your own code, you also need API access:
+
+<ApiAccess />
 
 ## Endpoints
 
