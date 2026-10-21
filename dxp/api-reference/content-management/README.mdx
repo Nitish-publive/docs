@@ -3,6 +3,8 @@ title: "Overview"
 description: "APIs for creating, updating, and managing content in your Publive CMS"
 ---
 
+import ApiAccess from '/snippets/availability/api-access.mdx';
+
 The Content Management Service (CMS) provides full CRUD access to your content. Use these APIs to create, update, retrieve, and delete posts, categories, tags, and media programmatically.
 
 **Base URL:** `https://cms.thepublive.com/publisher/{publisher_id}/`
@@ -10,6 +12,10 @@ The Content Management Service (CMS) provides full CRUD access to your content. 
 <Info>
 All CMS endpoints require HTTP Basic Auth via the `Authorization` header. Request `Content-Type` varies by endpoint — most POST/PATCH endpoints use `application/json`, but check each endpoint's page: for example, Media Library's create/update endpoints require `multipart/form-data` or `application/x-www-form-urlencoded` instead.
 </Info>
+
+## Availability
+
+<ApiAccess />
 
 ## Resources
 

@@ -4,6 +4,8 @@ description: Register an existing external media URL to the CMS library
 openapi: "openapi/media-register-url.json POST /publisher/{publisher_id}/media-library/"
 ---
 
+import ApiAccess from '/snippets/availability/api-access.mdx';
+
 Registers an already-hosted media URL as a new entry in the library, without uploading a file. Send the request as `application/x-www-form-urlencoded` with a `path` field pointing at the external URL.
 
 <Warning>
@@ -13,6 +15,10 @@ Registers an already-hosted media URL as a new entry in the library, without upl
 <Info>
   To upload a file directly instead, see [Upload Media (File)](/dxp/api-reference/content-management/media/upload-media-file). Both pages document the same endpoint — pick whichever example below matches how you're sending the request.
 </Info>
+
+## Availability
+
+<ApiAccess />
 
 #### Example Request
 

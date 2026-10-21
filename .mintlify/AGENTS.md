@@ -17,6 +17,7 @@
 ## Terminology
 
 - Use **workspace** instead of **project**.
+- Use **workspace** instead of **publisher** in prose. Keep literal API and UI names as they are (e.g., `publisher_id`, **Publisher ID**, **Publisher Data**).
 - Use **member** instead of **user** when referring to platform/dashboard participants. Use **user** for end-readers or generic technical contexts.
 - This site documents two distinct products — never use bare "Publive" when the product is ambiguous:
   - **Publive DXP** — the headless CMS product (`documentation/`, `api-reference/`, existing `Documentation` / `Guides` / `API Reference` tabs).
@@ -46,6 +47,9 @@
 - **Prerequisites**: Guides must include a Prerequisites section at the top if API keys, specific configurations, or prior setups are required.
 - **API Endpoints**: Must always explicitly document rate limits, authentication requirements, and common error codes.
 - **Next Steps**: Include a Next Steps section at the bottom of long tutorials linking to related workflows.
+- **Availability**: Every page for a plan-gated feature must include an `## Availability` section near the top, after the intro. Do not name individual plan tiers (Growth, Advanced, Premium) and do not include prices or per-plan limits. Say "All plans include <FEATURE>." or "available on the **Custom Enterprise** plan only."
+  - Any page about API access (API reference overviews, quickstarts, SDKs, authentication, and API how-to guides) must use the `/snippets/availability/api-access.mdx` snippet. API access is a paid feature on the **Custom Enterprise** plan only.
+  - A feature that is not yet assigned to a plan is **Custom Enterprise** only. Use the `/snippets/availability/custom-enterprise.mdx` snippet.
 
 ## Mintlify Components & UI
 
@@ -58,8 +62,8 @@
 
 - **Internal Links**: Always use absolute paths from the root without the file extension (e.g., `[Billing](/settings/billing)` instead of `[Billing](./billing.mdx)`).
 - **Contact & Support Links**: Wherever text mentions contacting support, Publive, or a CSM (e.g., "contact Publive", "contact support", "talk to Publive"), it must include an explicit link to the contact/support page. Which link depends on the audience:
-  - **New client / entry point** (prospective clients, general product inquiries, requesting a new capability be enabled) — link to `https://axp.thepublive.com/contact` (e.g., `[contact Publive](https://axp.thepublive.com/contact)`).
-  - **Existing client technical support** (setup/integration guides for clients already onboarded, e.g. AXP Edge CDN setup) — link to `mailto:support@thepublive.com` (e.g., `[support@thepublive.com](mailto:support@thepublive.com)`).
+  - **AXP onboarding / new customers only** (prospective AXP clients, getting AXP Edge set up or live, buying an AXP service) — link to `https://axp.thepublive.com/contact` (e.g., `[contact Publive](https://axp.thepublive.com/contact)`).
+  - **Everything else** (all Publive DXP pages, existing clients, technical support, enabling a feature or plan) — link to `mailto:support@thepublive.com` and show the address (e.g., `contact [support@thepublive.com](mailto:support@thepublive.com)`). Do not use `help.thepublive.com` or `thepublive.com/contact-us`.
 
 ## API Reference conventions
 

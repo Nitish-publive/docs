@@ -4,6 +4,8 @@ description: Upload a media file directly to the CMS library
 openapi: "openapi/media-upload-file.json POST /publisher/{publisher_id}/media-library/"
 ---
 
+import ApiAccess from '/snippets/availability/api-access.mdx';
+
 Uploads a file directly to the media library as `multipart/form-data`.
 
 <Warning>
@@ -13,6 +15,10 @@ Uploads a file directly to the media library as `multipart/form-data`.
 <Info>
   To register an existing external URL instead of uploading a file, see [Register Media (URL)](/dxp/api-reference/content-management/media/register-media-url). Both pages document the same endpoint — pick whichever example below matches how you're sending the request.
 </Info>
+
+## Availability
+
+<ApiAccess />
 
 #### Example Request
 
