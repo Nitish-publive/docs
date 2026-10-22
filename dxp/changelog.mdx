@@ -8,6 +8,38 @@ rss: true
   Subscribe to this changelog via RSS at `https://docs.thepublive.com/changelog/dxp/rss.xml` — paste the URL into Slack (`/feed subscribe`), an RSS reader, or a tool like Zapier to get notified of new releases.
 </Tip>
 
+<Update label="October 21, 2026" tags={["New releases","Improvements","Bug fixes"]} rss={{ title:"Workflows (Maker-Checker), Publive MCP, up to 10x faster newsletters, faster dashboard and pages, structured data fixes" }}>
+  ### Workflows (Maker-Checker)
+
+  Posts can now require approval before they go live.
+
+  * Set up multi-step approvals, with each step assigned to a specific person or role.
+  * Workflows are enabled per publisher. [Contact us](mailto:support@thepublive.com) to turn them on.
+
+  ### Publive MCP
+
+  The Publive MCP server is live at `mcp.thepublive.com`. Connect Claude to your Publive workspace to work with your content through Publive's CMS and CDS. ChatGPT support is coming soon.
+
+  ### Improvements
+
+  * **Faster newsletters** — newsletter sending is now up to 10x faster, on top of the October 7 improvement. A send of about 555,000 emails that took nearly 8 hours now finishes in about 41 minutes.
+  * **Author profile updates** — changes to an author's photo, name, or hide/show setting now appear on your website within seconds: on the author page, the authors listing, and article bylines.
+  * **Faster dashboard** — the dashboard now handles many more requests at once, so it stays responsive at peak times.
+  * **Faster content updates** — sitemaps now rebuild only when your content changes. This frees up background processing, so content updates reach your site sooner.
+  * **Faster pages** — your website now reuses connections to Publive's APIs instead of opening a new one for every request, listing pages make fewer API calls, and sitemap pages load faster.
+  * **Casper theme on mobile** — the homepage lead image now loads first and images are sized for each device, so the homepage loads faster on mobile.
+  * **Publisher Analytics** — fake page views and spam titles sent from outside your site are now filtered out, and traffic that identifies itself as a bot is excluded. We're adding further protections.
+  * **Dailymotion videos** — Dailymotion videos in Featured Video and in-article embeds now play on existing articles. Your Dailymotion Player ID is added to the link automatically.
+  * **Distribute to X** — the X option no longer appears on the Distribute screen or in the post-list menu. See [Changes to X (Twitter) distribution](/dxp/documentation/distribution/x-distribution-change).
+
+  ### Bug fixes
+
+  * **Ad-free plans** — subscribers on plans that include an ad-free experience no longer see ads.
+  * **Structured data with author bio links** — article structured data no longer breaks when an author's bio contains a link, which clears "Unparsable structured data" errors in Google Search Console.
+  * **Article structured data escaping** — article content in structured data (JSON-LD) is no longer double-escaped.
+  * **V1 footer** — Quick Links, Top Categories, and social icons in the V1 footer now show once instead of twice.
+</Update>
+
 <Update
   label="October 7, 2026"
   tags={["New releases", "Security", "Improvements"]}
