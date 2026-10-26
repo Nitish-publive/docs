@@ -14,6 +14,12 @@
 - Use active voice and second person ("you").
 - Keep sentences concise — one idea per sentence.
 
+## Mandatory writing pass: ASD-STE100
+
+- **Mandatory:** Run the `/asd-ste100` skill (Simplified Technical English) on every new or edited page before you finish. This applies to MDX prose, headings, callouts, table cells, and step text.
+- Do not rewrite code blocks, UI labels, API field names, or other literal strings. Keep these exactly as they appear in the product.
+- If an STE rule conflicts with a rule in this file (terminology, bold UI elements, placeholder formatting, sentence-case headings), this file wins.
+
 ## Terminology
 
 - Use **workspace** instead of **project**.
